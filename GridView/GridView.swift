@@ -835,6 +835,20 @@ extension GridView: UIScrollViewDelegate {
             originDelegate?.scrollViewDidScroll?(scrollView)
         }
     }
+    public func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+        originDelegate?.scrollViewWillBeginDecelerating!(scrollView)
+
+    }
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        originDelegate?.scrollViewDidEndDecelerating!(scrollView)
+    }
+    public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        originDelegate?.scrollViewWillBeginDragging!(scrollView)
+
+    }
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        originDelegate?.scrollViewDidEndDragging!(scrollView, willDecelerate: decelerate)
+    }
 }
 
 // for debug view hierarchy
