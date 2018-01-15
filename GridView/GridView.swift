@@ -165,9 +165,9 @@ open class GridView: UIScrollView {
         if bounds.size != currentViewBounds.size {
             currentViewBounds = bounds
             
-            if needsLayout == .none {
-                needsLayout = .layout(.rotating(currentMatrix))
-            }
+//            if needsLayout == .none {
+//                needsLayout = .layout(.rotating(currentMatrix))
+//            }
         }
         
         let areAnimationsEnabled = UIView.areAnimationsEnabled
